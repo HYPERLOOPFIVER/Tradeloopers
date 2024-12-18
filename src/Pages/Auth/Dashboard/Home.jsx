@@ -235,8 +235,8 @@ const HomePage = () => {
 <center>     <div className={styles.linnk}>
           <Link to="/bsp">Purchase Stocks</Link>
         </div></center>
-    
-  
+    <h3>Hyperloop Finance Services</h3>
+  <p>@2025Copyrights reserved for HyperloopServices</p>
        <BottomNavbar/>
   </div></>
   );
