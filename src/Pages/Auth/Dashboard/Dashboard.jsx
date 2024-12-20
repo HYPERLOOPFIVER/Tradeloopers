@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Import axios for API requests
 import styles from './Dashboard.module.css';
 import { Link } from "react-router-dom";
-import BottomNavbar from "./BottomNavbar";
+
 
 const Dashboard = () => {
   const [user] = useAuthState(auth);
@@ -259,7 +259,7 @@ const Dashboard = () => {
 
     
     
-  </div> <BottomNavbar/></>
+  </div> </>
   );
 };
 

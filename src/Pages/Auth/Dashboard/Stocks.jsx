@@ -5,7 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../../../Firebase';
 import axios from 'axios'; // For fetching stock prices
 import styles from './Stocks.module.css'; // Assuming you have a CSS file for styling
-import BottomNavbar from './BottomNavbar';
+
 
 const Stocks = () => {
   const [user] = useAuthState(auth);
@@ -77,7 +77,7 @@ const Stocks = () => {
         ) : (
           <p>Loading portfolio...</p>
         )}
-        <BottomNavbar/>
+   
       </div>
     </>
   );

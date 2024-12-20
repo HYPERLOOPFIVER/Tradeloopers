@@ -235,11 +235,12 @@ const HomePage = () => {
 <center>     <div className={styles.linnk}>
           <Link to="/bsp">Purchase Stocks</Link>
         </div></center>
-    <h3>Hyperloop Finance Services</h3>
-    <h1>hyperloop</h1>
-  <p>@2025Copyrights reserved for HyperloopServices</p>
-       <BottomNavbar/>
-  </div></>
+ 
+   
+  </div>
+  
+  <BottomNavbar/>
+  </>
   );
 };
 
