@@ -5,6 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../../../Firebase';
 import axios from 'axios'; // For fetching stock prices
 import styles from './Stocks.module.css'; // Assuming you have a CSS file for styling
+import BottomNavbar from './BottomNavbar';
 
 
 const Stocks = () => {
@@ -53,7 +54,9 @@ const Stocks = () => {
 
   return (
     <>
-      <center> <h3 className={styles.head}>TRADELOOP</h3></center>
+           <center className={styles.cent}>
+             <h3 className={styles.head}>StockSimHub</h3>
+           </center>
       <div className={styles.stocksPage}>
         <h1>Your Purchased Stocks</h1>
         {portfolio ? (
@@ -79,6 +82,9 @@ const Stocks = () => {
         )}
    
       </div>
+      <h3 className={styles.bk}>Test disiplay</h3>
+
+      <BottomNavbar/>
     </>
   );
 };

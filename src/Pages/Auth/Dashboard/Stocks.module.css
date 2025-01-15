@@ -1,63 +1,133 @@
-/* Stocks.module.css */
+:root {
+  --primary-color: #0a1a2a; /* Deep navy */
+  --secondary-color: #32ff7e; /* Neon green */
+  --accent-color: #ff9500; /* Vibrant orange */
+  --text-color: #f5f5f5; /* Soft white */
+  --glass-bg: rgba(20, 20, 30, 0.7); /* Glass effect */
+  --glass-border: rgba(255, 255, 255, 0.1); /* Subtle border */
+  --gradient-bg: linear-gradient(135deg, #121212, #1c1c1c); /* Subtle dark gradient */
+}
+
+
+
 .stocksPage {
-    padding: 20px;
-    background-color: #f4f6f9;
-    min-height: 100vh;
-    display: flex;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.stockList {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.stockItem {
+  backdrop-filter: blur(10px);
+  background: white;
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgb(255, 111, 0);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stockItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px var(--accent-color);
+}
+
+.stockItem h3 {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.stockItem p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .stockList {
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
   }
-  
-  .stocksPage h1 {
-    text-align: center;
-    color: #333;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .stockList {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-height: 70vh;  /* Limit the height of the stock list */
-    overflow-y: auto;  /* Enable vertical scrolling if content exceeds max height */
-    width: 100%;
-    padding-right: 10px;  /* Optional: Add space to ensure scroll is visible */
-  }
-  
+
   .stockItem {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 5px 0;  /* Add space between items */
+    width: 100%;
+    max-width: 90%;
   }
-  
-  .stockItem h3 {
-    font-size: 20px;
-    color: #3498db;
+}
+.nor{
+  margin-top: 0;
+  background-color: #000000;
+}
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
   }
-  
-  .stockItem p {
-    font-size: 16px;
-    color: #333;
-    margin: 5px 0;
+
+  .gainLoss,
+  .portfolioValue {
+    flex: 1 1 100%;
   }
-  
-  .stockItem p:last-child {
-    font-weight: bold;
-    color: #2ecc71;
+
+  .dashboard {
+    padding: 1.5rem;
   }
-  
-  .head {
-    background-color: #000000;
-    font-family: cursive;
-    font-size: 2.4em;
-    background: linear-gradient(rgb(3, 80, 151), rgb(28, 89, 202), rgb(243, 135, 135));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+
+  .chart {
+    padding: 1rem;
   }
-  
+
+  .cent h3 {
+    font-size: 1rem;
+  }
+}
+.cento{
+  background-color: #0a1a2a00;
+}
+.tradeloop-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 100px; /* Adjust based on your logo size */
+  z-index: 10;
+}
+
+/* Header Section - Fixed on top */
+.cent {
+  background-color: black;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgb(47, 42, 42);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.cent h3 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-shadow: none; /* Removed glowing effect from text */
+  z-index: 10; /* Ensures text stays above other content */
+}
+.bk{
+  color: #000000;
+}

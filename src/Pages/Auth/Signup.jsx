@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { signUpUser } from "./AuthMethods"; // Import the sign-up method
 import { useNavigate } from "react-router-dom";
+import styles from "./Login.module.css"; // Reuse the same Login CSS
+import Video from "../../../public/hello.mp4";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -21,86 +23,47 @@ const SignUp = () => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        background: "#f9f9f9",
-        fontFamily: "'Poppins', sans-serif",
-      }}
-    >
-      <form
-        onSubmit={handleSignUp}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "15px",
-          padding: "30px",
-          width: "100%",
-          maxWidth: "400px",
-          background: "#ffffff",
-          boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-          borderRadius: "10px",
-          textAlign: "center",
-        }}
-      >
-        <h2 style={{ margin: "0 0 20px 0", color: "#333" }}>Sign Up</h2>
+    <div className={styles.wrapper}>
+      {/* Background Video */}
+      <video autoPlay loop muted className={styles.video}>
+        <source src={Video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Sign-Up Form */}
+      <form className={styles.container} onSubmit={handleSignUp}>
+        <h2 className={styles.trl}>TRADELOOP</h2>
+      
         <input
+          className={styles.input}
           type="text"
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)} // Capture name input
-          style={{
-            padding: "10px",
-            border: "1px solid #ddd",
-            borderRadius: "5px",
-            outline: "none",
-            fontSize: "16px",
-          }}
         />
         <input
+          className={styles.input}
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)} // Capture email input
-          style={{
-            padding: "10px",
-            border: "1px solid #ddd",
-            borderRadius: "5px",
-            outline: "none",
-            fontSize: "16px",
-          }}
         />
         <input
+          className={styles.input}
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)} // Capture password input
-          style={{
-            padding: "10px",
-            border: "1px solid #ddd",
-            borderRadius: "5px",
-            outline: "none",
-            fontSize: "16px",
-          }}
         />
-        <button
-          type="submit"
-          style={{
-            padding: "10px",
-            background: "#4caf50",
-            color: "#fff",
-            border: "none",
-            borderRadius: "5px",
-            fontSize: "16px",
-            cursor: "pointer",
-            transition: "background 0.3s ease",
-          }}
-        >
+        <button className={styles.button} type="submit">
           Sign Up
         </button>
+        <div className={styles.switch}>
+          Already have an account?{" "}
+          <button type="button" onClick={() => navigate("/login")}>
+            Login
+          </button>
+        </div>
       </form>
     </div>
   );

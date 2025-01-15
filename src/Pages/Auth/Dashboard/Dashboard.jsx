@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Import axios for API requests
 import styles from './Dashboard.module.css';
 import { Link } from "react-router-dom";
+import BottomNavbar from "./BottomNavbar";
 
 
 const Dashboard = () => {
@@ -213,7 +214,9 @@ const Dashboard = () => {
 
   return (
   <>  
- <center> <h3 className={styles.head}>TRADELOOP</h3></center>
+ <center className={styles.cent}>
+        <h3 className={styles.head}>StockSimHub</h3>
+      </center>
   <div className={styles.dashboard}>
     <h1>Welcome back, {userData?.Name}</h1>
     <p>Email: {userData?.email}</p>
@@ -259,7 +262,9 @@ const Dashboard = () => {
 
     
     
-  </div> </>
+  </div>
+<BottomNavbar/>
+   </>
   );
 };
 

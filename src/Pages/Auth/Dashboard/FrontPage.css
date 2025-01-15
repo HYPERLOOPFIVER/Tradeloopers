@@ -1,0 +1,221 @@
+/* FrontPage.css */
+
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #0d0000;
+    background-color: #ffffff;
+    border-radius: 50px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #333;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+padding: auto;
+    background-color: #00000063;
+    border-bottom: 1px solid #f6111100;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+   color: #fff;
+
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .navbar-link {
+    padding: 8px 18px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .navbar-link.signup {
+    padding: 8px 18px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .navbar-link:hover {
+    color: #000;
+  }
+  
+  .navbar-link.signup:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background:  url('https://4kwallpapers.com/images/wallpapers/gradient-background-6016x3384-11027.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
+  .hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ccc;
+  }
+  
+  .hero-content .cta-button {
+    margin-top: 20px;
+  }
+  
+  /* Sections */
+  section {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #dacece;
+  }
+  
+  /* Steps */
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .step {
+    flex: 1;
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .step p {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  
+  /* Testimonials */
+  .testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .testimonial {
+    max-width: 300px;
+    font-style: italic;
+    background-color: #1f1111;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(243, 195, 195, 0.15);
+  }
+  
+  /* Features */
+  .feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    flex: 1;
+    max-width: 300px;
+    background-color: #000000;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 3px 6px 14px rgba(255, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #111;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #111;
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  

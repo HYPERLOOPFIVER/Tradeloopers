@@ -6,6 +6,7 @@ import { auth, db } from '../../../Firebase';
 import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import { updatePassword } from 'firebase/auth';
 import styles from './Settings.module.css'; // Make sure you style your settings page
+import BottomNavbar from './BottomNavbar';
 
 const Settings = () => {
   const [user] = useAuthState(auth);
@@ -66,8 +67,9 @@ const Settings = () => {
         <button onClick={handlePasswordChange}>Change Password</button>
         {passwordError && <p className={styles.error}>{passwordError}</p>}
       </div>
-    
+      <BottomNavbar/>
     </div>
+  
   );
 };
 

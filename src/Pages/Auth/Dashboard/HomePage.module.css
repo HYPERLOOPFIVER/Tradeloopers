@@ -1,179 +1,177 @@
-/* General Styling */
-body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, #f7faff, #e9f0f7);
-  margin: 0;
-  padding: 0;
-  color: #2c3e50;
-  padding-bottom: 80px; /* Adding space at the bottom to avoid content being hidden behind the navbar */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  overflow-y: auto;  /* Allow vertical scrolling */
-  height: 100vh; /* Ensure body takes full height */
-  box-sizing: border-box; /* Prevent overflow from padding/margins */
-}
+:root {
+    --primary-color: #0a1a2a; /* Deep navy */
+    --secondary-color: #32ff7e; /* Neon green */
+    --accent-color: #ff9500; /* Vibrant orange */
+    --text-color: #f5f5f5; /* Soft white */
+    --glass-bg: rgba(20, 20, 30, 0.7); /* Glass effect */
+    --glass-border: rgba(255, 255, 255, 0.1); /* Subtle border */
+    --gradient-bg: linear-gradient(135deg, #121212, #1c1c1c); /* Subtle dark gradient */
+  }
+  
+  .homePageWrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  background-color: black;
+    color: var(--text-color);
+    font-family: "Poppins", sans-serif;
 
-/* Header Styling */
-.head
-/* Home Container */
-.home {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 2.5rem;
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  text-align: center;
-}
-
-/* Welcome Section */
-.home h1 {
-  font-size: 2.8rem;
-  font-weight: bold;
-  color: #34495e;
-  margin-bottom: 1.5rem;
-}
-
-.home p {
-  font-size: 1.2rem;
-  color: #7f8c8d;
-  margin-bottom: 2.5rem;
-  font-weight: 500;
-}
-
-/* Tagline */
-.home h3 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #16a085;
-  margin-bottom: 2rem;
-}
-
-/* Stats Section */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 1.5rem;
-  background: linear-gradient(180deg, #f9fbfd, #eef2f5);
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-}
-
-/* Individual Stat Cards */
-.gainLoss,
-.portfolioValue {
-  padding: 2rem;
-  border-radius: 12px;
-  color: #ffffff;
-  font-weight: bold;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gainLoss {
-  background: linear-gradient(135deg, #78e08f, #38d39f);
-  box-shadow: 0 4px 8px rgba(120, 224, 143, 0.3);
-}
-
-.portfolioValue {
-  background: linear-gradient(135deg, #f368e0, #ff9ff3);
-  box-shadow: 0 4px 8px rgba(243, 104, 224, 0.3);
-}
-
-.gainLoss:hover,
-.portfolioValue:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.gainLoss h3,
-.portfolioValue h3 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-}
-
-.gainLoss p,
-.portfolioValue p {
-  font-size: 1.3rem;
-}
-
-/* Motivational Quote */
-.stats h2 {
-  font-size: 1.5rem;
-  font-style: italic;
-  color: #2c3e50;
-  margin-top: 1.5rem;
-  text-align: center;
-}
-
-/* Link Button */
-.linnk {
-  margin: 2.5rem 0;
-}
-
-.linnk a {
-  font-size: 1.3rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #ffffff;
-  background: linear-gradient(90deg, #3498db, #1abc9c);
-  padding: 1rem 2.5rem;
-  border-radius: 10px;
-  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.4);
-}
-
-.linnk a:hover {
-  background: linear-gradient(90deg, #1abc9c, #3498db);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(52, 152, 219, 0.5);
-}
-
-/* Bottom Navigation Bar */
-.bottomNavbar {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #34495e;
-  padding: 1rem 0;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 10; /* Ensure it stays above content */
-}
-
-.bottomNavbar a {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #ecf0f1;
-  margin: 0 1.5rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.bottomNavbar a:hover {
-  color: #1abc9c;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .head {
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  /* Fixed Logo */
+  .tradeloop-logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 100px; /* Adjust based on your logo size */
+    z-index: 10;
+  }
+  
+  /* Header Section - Fixed on top */
+  .cent {
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgb(47, 42, 42);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+  
+  .cent h3 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-shadow: none; /* Removed glowing effect from text */
+    z-index: 10; /* Ensures text stays above other content */
+  }
+  
+  /* Offset the content to prevent overlap with fixed header */
+  .homePageWrapper {
+    padding-top: 60px; /* Adjust the space for the fixed header */
+  }
+  
+  /* Dashboard */
+  .dashboard {
+    backdrop-filter: blur(15px);
+  background-color:#000000;
+    
+    border-radius: 15px;
+    padding: 2rem;
+width: 90vw;
+    margin: 1rem auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+  
+  .dashboard h1 {
     font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
   }
-
-  .home h1 {
-    font-size: 2.4rem;
+  
+  .dashboard p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
   }
-
+  
+  /* Stats Section */
   .stats {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .gainLoss,
+  .portfolioValue {
+    flex: 1 1 calc(50% - 1rem);
+    backdrop-filter: blur(12px);
+    background-color: #ffffff;
+    
+    border: 1px solid var(--glass-border);
+
+
+    border-radius: 12px;
     padding: 1rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgb(32, 247, 215);
+    transition: box-shadow 0.3s, transform 0.2s;
+   /* Glowing effect on cards */
   }
-
-  .bottomNavbar {
-    padding: 0.8rem 0;
+  
+  
+  .gainLoss h3,
+  .portfolioValue h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: black;
   }
-
-  .bottomNavbar a {
-    font-size: 0.9rem;
-    margin: 0 1rem;
+  
+  /* Chart Section */
+  .chart {
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgb(109, 255, 41);
+   
   }
-}
+  
+  /* Buttons with Subtle Glow Effect */
+  .linnk {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .linnk a {
+    text-decoration: none;
+    color: var(--text-color);
+    background: var(--secondary-color);
+    padding: 0.8rem 2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.3s, background 0.3s;
+    text-shadow: 0 0 6px var(--secondary-color), 0 0 8px var(--secondary-color); /* Glowing effect on button */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .stats {
+      flex-direction: column;
+    }
+  
+    .gainLoss,
+    .portfolioValue {
+      flex: 1 1 100%;
+    }
+  
+    .dashboard {
+      padding: 1.5rem;
+    }
+  
+    .chart {
+      padding: 1rem;
+    }
+  
+    .cent h3 {
+      font-size: 1rem;
+    }
+  }
+  .cento{
+    background-color: #0a1a2a00;
+  }
+  

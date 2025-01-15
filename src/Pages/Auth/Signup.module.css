@@ -1,0 +1,94 @@
+/* SignUp.module.css */
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+      ),
+      url("../../../public/hello.mp4") center/cover no-repeat;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .form {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .input:focus {
+    border-color: #e3b23c; /* Gold accent like Tesla */
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+    background: #e3b23c; /* Gold button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button:hover {
+    background: #c99a32; /* Darker gold on hover */
+    transform: scale(1.05);
+  }
+  
+  .button:active {
+    transform: scale(0.98);
+  }
+  
+  @media (max-width: 768px) {
+    .form {
+      width: 90%;
+      padding: 30px;
+    }
+  
+    .heading {
+      font-size: 2rem;
+    }
+  }
+  
